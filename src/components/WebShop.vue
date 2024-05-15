@@ -22,7 +22,6 @@ const handleBuy = (id: number) => {
 
   if (index >= 0) {
     state.value.cart[index].amount++;
-    console.log('amount after increment:', state.value.cart[index].amount);
   } else {
     const productToAdd = state.value.products.find(
       (product) => product.id === id
@@ -30,7 +29,6 @@ const handleBuy = (id: number) => {
     if (productToAdd)
       state.value.cart.push({ product: productToAdd, amount: 1 });
   }
-  console.log('cart:', state.value.cart);
 };
 
 
