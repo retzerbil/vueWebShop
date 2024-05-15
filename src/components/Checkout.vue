@@ -7,9 +7,11 @@ defineProps<{cart:ICartItem[]}>()
 </script>
 
 <template>
-<section class="products">
-    <Product v-for="item in cart":product="item.product":on-checkout="true"/>
-</section>
-</template>
+    <section class="products">
+        <div v-for="item in cart">
+            <Product v-for="amount in item.amount" :product="item.product" :on-checkout="true"/>
+        </div>
+    </section>
+    </template>
 
 <style scoped></style>
