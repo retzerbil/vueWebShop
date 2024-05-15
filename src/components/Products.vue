@@ -12,7 +12,7 @@ interface ProductProps {
 defineProps<ProductProps>();
 
 defineEmits<{
-    (e: "handleBuy", id:string):void;
+    (e: "handleBuy", id:number):void;
 }>();
 </script>
 
@@ -26,7 +26,7 @@ defineEmits<{
         :product="product" 
         :key="product.id" 
         :on-checkout="false"
-        @buy="(id:string)=>{$emit('handleBuy',id)}"/>
+        @buy="(id:number)=>{$emit('handleBuy',id)}"/>
     </section>
 </template>
 

@@ -10,7 +10,7 @@ interface ProductProps {
 defineProps<ProductProps>();
 
 defineEmits<{
-    (e: "buy", id:string):void;
+    (e: "buy", id:number):void;
 }>();
 </script>
 

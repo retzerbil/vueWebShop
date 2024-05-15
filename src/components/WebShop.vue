@@ -16,11 +16,9 @@ onMounted(async()=>{
 })
 
 const handleBuy = (id: number) => {
-  console.log('id:', id);
   const index = state.value.cart.findIndex(
     (cartItem) => cartItem.product.id === id
   );
-  console.log('index:', index);
 
   if (index >= 0) {
     state.value.cart[index].amount++;
